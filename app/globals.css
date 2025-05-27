@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import 'remixicon/fonts/remixicon.css';
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #F9FAFC;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* 상세 분석 페이지 전용 스타일 */
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform-origin: 50% 50%;
+}
+
+.insight-card {
+  min-width: 240px;
+}
+
+.race-card {
+  min-width: 280px;
+}
+
+.horse-card {
+  min-width: 220px;
+}
+
+.insight-card {
+  min-width: 240px;
+}
+
+.confidence-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.confidence-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+}
+
+.confidence-A::before { background-color: #3449FF; }
+.confidence-B::before { background-color: #00B894; }
+.confidence-C::before { background-color: #FF9F43; }
+.confidence-D::before { background-color: #FF6B6B; }
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.35s;
+  transform-origin: 50% 50%;
+}
+
+.slide-up {
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.slide-up.active {
+  transform: translateY(0);
+}
+
+.custom-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.custom-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e2e8f0;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .switch-slider {
+  background-color: #3449FF;
+}
+
+input:checked + .switch-slider:before {
+  transform: translateX(20px);
+} 
