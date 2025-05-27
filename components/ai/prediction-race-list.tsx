@@ -78,7 +78,6 @@ export default function PredictionRaceList({ races, onRaceSelect }: PredictionRa
 
           <CTAButton 
             variant="primary" 
-            size="sm"
             onClick={() => onRaceSelect(race.id)}
             className="w-full"
           >
